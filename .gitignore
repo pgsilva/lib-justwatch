@@ -11,7 +11,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
@@ -29,4 +28,9 @@ data/testdb.mv.db
 .data/
 
 justwatch/.gradle/
-justwatch/build/
+justwatch/build/classes
+justwatch/build/kotlin
+justwatch/build/reports
+justwatch/build/test-results
+justwatch/build/tmp
+justwatch/gradle/wrapper/gradle-wrapper.jar
