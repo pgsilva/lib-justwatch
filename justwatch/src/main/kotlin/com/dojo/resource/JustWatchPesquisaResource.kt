@@ -13,7 +13,7 @@ class JustWatchPesquisaResource {
 
     private val gson: Gson = Gson()
 
-    fun pesquisarFilmesEShows(keyword: String): Resultado? {
+    fun pesquisarFilmesEShows(keyword: String?): Resultado? {
         val pesquisa: Pesquisa =
             Pesquisa(query = keyword, page = 1, page_size = 30, content_types = listOf("show", "movie"))
 
@@ -29,9 +29,10 @@ class JustWatchPesquisaResource {
 
     }
 
+
     fun recuperarUrlPoster(item: Item): String {
-        return "$JUST_WATCH_API_IMAGE_URI${item.poster.replace("{profile}", "s718")}/${
-            item.full_path.split("/").last()
+        return "$JUST_WATCH_API_IMAGE_URI${item.poster?.replace("{profile}", "s718")}/${
+            item.full_path?.split("/")?.last()
         }.webp"
 
     }
